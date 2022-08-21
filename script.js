@@ -9,21 +9,51 @@ let random_grade_div = document.getElementById("random-grade");
 
 // طبّق الخطوة 4 في أسفل هذا الكومنت
 
+grades.pop()
+
 // طبّق الخطوة 5 في أسفل هذا الكومنت
+
+grades.push(99)
 
 // طبّق الخطوة 6 أسفل هذا الكومنت
 
+grades.forEach(element => {
+  all_grades_div.innerHTML += `<div>${element}</div>`;
+
+});
+
+for (let index = 0; index < grades.length; index++) {
+  let element = grades[index];
+  console.log(element);
+  
+}
+
+let grade = [90, 94, 65, 80, 39, 55, 83, 92, 39, 93, 43, 70, 57, 0];
+
+   function x (grade){
+  if (grade == 90 && grade == 94 && grade == 65 && grade ==80 &&  grade ==39,  grade ==55 && grade == 83 && grade == 92 &&  grade ==39 &&  grade ==93 && grade == 43 &&  grade ==70 &&  grade ==57&& grade == 0){
+   console.log (grade)
+  }else if (grade != 90 && grade!= 94 && grade!= 65 && grade!=80 &&  grades!=39,  grades!=55 && grades!= 83 && grades!= 92 &&  grade!=39 &&  grade!=93 && grade!= 43 &&  grade!=70 &&  grade!=57&& grade!= 0){
+    return (`لدرجة غير موجوده`)
+  }
+}
 
 
-function search() {
+function search() { 
   let inputValue = document.getElementById("input").value;
   
   // طبّق الخطوة 7 أسفل هذا الكومنت
-  
+  let filteredGrades = grades.filter((x) => x == inputValue);
+  console.log (filteredGrades)
+
 }
 
 // طبّق الخطوة 8 و 9 أسفل هذا الكومنت
 
+let randomIndex = Math.floor(Math.random() * grades.length)
+
 // طبّق الخطوة 10 أسفل هذا الكومنت
+
+random_grade_div.innerHTML = `<div>${grades[randomIndex]}</div>`;
 
 
